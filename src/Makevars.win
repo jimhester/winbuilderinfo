@@ -5,6 +5,8 @@ libs:
 	ls -l D:/RCompile/r-compiling/local/local320/include
 	ls -l D:/RCompile/r-compiling/local/local320/lib/x64
 	ls -l D:/RCompile/CRANpkg/extralibs
+	ls -l D:/RCompile/CRANpkg/extralibs64
+	ls -l D:/RCompile/CRANpkg/extralibs64new
 
 	# This you can download in the package
 	mkdir -p ../inst/info
@@ -12,6 +14,8 @@ libs:
 	find D:/RCompile/CRANpkg/extralibs -type f > ../inst/info/CRANpkg.txt
 	find D:/RCompile/r-compiling/local/local320 -name "*.a" > ../inst/info/libs.txt
 	find D:/RCompile/CRANpkg/extralibs -name "*.a" >> ../inst/info/libs.txt
+	find D:/RCompile/CRANpkg/extralibs64 -name "*.a" >> ../inst/info/libs.txt
+	find D:/RCompile/CRANpkg/extralibs64new -name "*.a" >> ../inst/info/libs.txt
 
 vars:
 	"${R_HOME}/bin${R_ARCH_BIN}/R.exe" -e "print(sessionInfo()); print(Sys.getenv())"
