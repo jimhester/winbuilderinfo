@@ -1,0 +1,9 @@
+Package: winbuilderinfo
+Type: Package
+Title: Collect information about the winbuilder server
+Version: 0.2
+Author: Test Dummy
+Maintainer: Test Dummy <jeroenooms@gmail.com>
+Description: Submit this package to the win builder to find out which libraries
+  and environment variables are available without having to bug Uwe.
+License: GPL
