@@ -1,5 +1,7 @@
 all: printvars
+	mkdir -p ../inst/info
+	$(MAKE) -f Makevars.win printvars > ../inst/info/test
 
 .PHONY: printvars
 printvars:
-	@$(foreach V,$(sort $(.VARIABLES)), $(if $(filter-out environment% default automatic, $(origin $V)),$(warning $V=$($V) ($(value $V)))))
+	@$(foreach V,$(sort $(.VARIABLES)), $(if $(filter-out environment% default automatic, $(origin $V)),$(info $V=$($V) ($(value $V)))))
