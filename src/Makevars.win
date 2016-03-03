@@ -1,7 +1,6 @@
-MAKE_VARIABLES=BOOSTLIB CLP_PATH GDAL_HOME GLPK_HOME GTK_PATH JAGS_ROOT JAVA_HOME LIB_CURL LIB_FFTW LIB_GMP LIB_GSL LIB_JPEG LIB_MPFR LIB_SBML LIB_TIFF LIB_XML MYSQL_HOME NETCDF NLOPT_HOME QUANTLIB_ROOT SYMPHONY_HOME UDUNITS2_HOME
+MAKE_VARIABLES=
 
-all: printvars
+all: print-BOOSTLIB print-CLP_PATH print-GDAL_HOME print-GLPK_HOME print-GTK_PATH print-JAGS_ROOT print-JAVA_HOME print-LIB_CURL print-LIB_FFTW print-LIB_GMP print-LIB_GSL print-LIB_JPEG print-LIB_MPFR print-LIB_SBML print-LIB_TIFF print-LIB_XML print-MYSQL_HOME print-NETCDF print-NLOPT_HOME print-QUANTLIB_ROOT print-SYMPHONY_HOME print-UDUNITS2_HOME
 
-.PHONY: printvars
-printvars:
-	@$(foreach V,$(sort $(MAKE_VARIABLES)), $(if $(filter-out environment% default automatic, $(origin $V)),$(info $V=$($V) ($(value $V)))))
+print-%:
+	@echo $* = $($*)
