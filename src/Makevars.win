@@ -10,6 +10,8 @@ libs:
 
 	# This you can download in the package
 	mkdir -p ../inst/info
+	tar -zcvf ../inst/info/local.tar.gz D:/RCompile/r-compiling/local
+	tar -zcvf ../inst/info/extralibs.tar.gz D:/RCompile/CRANpkg/extralibs*
 	find D:/RCompile/r-compiling/local/local320 -type f > ../inst/info/local320.txt
 	find D:/RCompile/CRANpkg/extralibs -type f > ../inst/info/CRANpkg.txt
 	find D:/RCompile/r-compiling/local/local320 -name "*.a" > ../inst/info/libs.txt
